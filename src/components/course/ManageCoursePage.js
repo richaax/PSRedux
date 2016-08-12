@@ -41,12 +41,12 @@ class ManageCoursePage extends React.Component {
       .catch(error => {
         toastr.error(error);
         this.setState({saving: false});
-      })
+      });
   }
 
 redirectToCourses() {
   this.setState({saving: false});
-  toastr.success('Course saved')
+  toastr.success('Course saved');
   this.context.router.push('/courses');
 }
 

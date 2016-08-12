@@ -10,7 +10,7 @@ export function loadAuthors() {
   // promise then dispatch when done
   // thunk always returns a function that accepts a dispatch
   return function(dispatch) {
-    dispatch(beginAjaxCall())
+    dispatch(beginAjaxCall());
     // returns a promise
     return AuthorApi.getAllAuthors().then(authors => {
       dispatch(loadAuthorsSuccess(authors));
